@@ -8,8 +8,6 @@
 - borda;
 - raio;
 
-- gap para caso tenha mais de 1 elemento no conteiner.
-
 ### container-card
 
 - sistema de cards que podem se sobrepor de acordo com tamanho disponível;

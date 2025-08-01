@@ -25,7 +25,7 @@ body {
   box-sizing: inherit;
 }
 
-/* generic itens */
+/* generic items */
 
 [class*="container"] {
   width: 30vw;
@@ -44,16 +44,18 @@ body {
   object-fit: contain;
 }
 
-/* profile conteiner */
+/* profile container */
 
 .profile-container {
   display: grid;
-  grid-template: 8fr / 2fr;
-  justify-content: center;
+  grid-template-rows: 9fr / 1fr;
+  grid-template-columns: 1fr;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .profile-container div:first-of-type {
-  align-self: center;
+  align-self: flex-end;
 }
 
 .profile-container h2:first-of-type {
@@ -69,4 +71,55 @@ body {
 
 /* card-container */
 
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 
+  width: 35vw;
+  aspect-ratio: 16 / 6;
+  gap: 10px;
+}
+
+.card-container h3 {
+  padding: 0;
+  margin: 0;
+}
+
+.card-container>div:last-of-type {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  gap: 10px;
+}
+
+.card {
+  width: 22%;
+  aspect-ratio: 2 / 3;
+  border-radius: 6px;
+  background-color: #f6f2ff;
+  box-shadow: 0 0px 16px rgba(80, 76, 116, 0.3);
+  border: solid 1px #f6f2ff8a;
+
+  left: 0px;
+  position: relative;
+
+  transition: transform 0.3s ease, left 0.3s ease, z-index 0s;
+}
+
+.card:not(:first-child) {
+  margin-left: -2.5em;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  z-index: 1;
+}
+
+.card:hover~.card {
+  left: 0.4em;
+}
