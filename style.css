@@ -1,13 +1,22 @@
-/* html & page & images*/
+/* all the page */
 
 body {
+  display: flex;
   box-sizing: border-box;
-  font: 1rem / 1.5 sans-serif;
-  font-size: clamp(0.8rem, 2vw, 1.2rem);
+  width: 100vw;
+  height: 100vh;
   margin: 0;
   padding: 0;
-background-color: #48c5ff;
-  color: #E8F1F2;
+
+  font: 1rem / 1.5 sans-serif;
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
+  background-color: #8074cc;
+  color: #504c74;
+  text-shadow: 0px 5px 10px #302c5433;
+
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
 }
 
 *,
@@ -16,58 +25,48 @@ background-color: #48c5ff;
   box-sizing: inherit;
 }
 
-.page {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+/* generic itens */
 
-  width: 100vw;
-  height: 100vh;
+[class*="container"] {
+  width: 30vw;
+  aspect-ratio: 16 / 9;
+  padding: 4% 8% 4% 8%;
+  border-radius: 30px;
+  border: solid 3px #302c54;
+
+  background-color: #d8ccfc;
+  box-shadow: 0px 20px 30px rgba(34, 0, 46, 0.507),
+    inset 0px 0px 5px rgba(34, 0, 46, 0.507);
 }
 
-/* header */
-
-.header {
-  margin-top: 3vh;
+.icons {
+  width: 6%;
+  object-fit: contain;
 }
 
-.header>* {
+/* profile conteiner */
+
+.profile-container {
+  display: grid;
+  grid-template: 8fr / 2fr;
+  justify-content: center;
+}
+
+.profile-container div:first-of-type {
+  align-self: center;
+}
+
+.profile-container h2:first-of-type {
   margin: 0;
   padding: 0;
 }
 
-.header>p {
-  text-align: center;
-}
-
-/* main */
-
-.main {
-  margin-block: auto;
-  position: relative;
-  top: -5vh;
-
+.profile-container div:last-of-type {
   display: flex;
-  justify-content: center;
-  gap: 5%;
+  align-self: flex-end;
+  gap: 10px;
 }
 
-/* my-card */
+/* card-container */
 
-.my-card>* {
-  font-style: none;
-  text-align: center;
-  font-size: clamp(0.8rem, 2vw, 1rem);
-}
 
-/* footer */
-
-.footer {
-  display: flex;
-  width: 98%;
-  height: 5%;
-
-  justify-content: flex-start;
-  gap: 1vw;
-  margin: 5px 5px 10px 10px;
-}

@@ -1,3 +1,0 @@
-- Cada carta terá um projeto dele;
-- Ao passar o mouse por cima da carta ela irá ficar maior e as outras ficarão cinzas;
-- Ao entrar na carta serão mostrados os melhores projetos feitos.
