@@ -59,19 +59,20 @@ h5 { font-size: clamp(1.25rem, 1.5vw, 1.25rem); line-height: 1.4; }
     padding: 10%;
 
     background-color: cadetblue;
+    gap: 15px;
 }
 
-.gallery > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.img-gallery {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
-.img__a {grid-area: a;}
-.img__b {grid-area: b;}
-.img__c {grid-area: c;}
-.img__d {grid-area: d;}
-.img__f {grid-area: f;}
+.img-gallery__a {grid-area: a; background-image: url(./assets/images/album1.jpg);}
+.img-gallery__b {grid-area: b; background-image: url(./assets/images/falido.jpg);}
+.img-gallery__c {grid-area: c; background-image: url(./assets/images/paulo-freire.jpg);}
+.img-gallery__d {grid-area: d; background-image: url(./assets/images/ni.jpg);}
+.img-gallery__f {grid-area: f; background-image: url(./assets/images/album2.jpg);}
 
 /* Images */
 
